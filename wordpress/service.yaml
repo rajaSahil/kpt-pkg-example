@@ -17,6 +17,7 @@ metadata: # kpt-merge: /wordpress
   name: wordpress
   labels:
     app: wordpress
+    env: demo
   annotations:
     internal.kpt.dev/upstream-identifier: '|Service|default|wordpress'
 spec:
@@ -24,6 +25,7 @@ spec:
   selector:
     app: wordpress
     tier: frontend
+    env: demo
   ports:
     - protocol: TCP
       port: 80

@@ -17,18 +17,21 @@ metadata: # kpt-merge: /wordpress
   name: wordpress
   labels:
     app: wordpress
+    env: demo
   annotations:
-    internal.kpt.dev/upstream-identifier: 'apps|Deployment|default|wordpress'
+    internal.kpt.dev/upstream-identifier: apps|Deployment|default|wordpress
 spec:
   selector:
     matchLabels:
       app: wordpress
       tier: frontend
+      env: demo
   template:
     metadata:
       labels:
         app: wordpress
         tier: frontend
+        env: demo
     spec:
       containers:
         - name: wordpress

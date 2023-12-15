@@ -3,8 +3,9 @@ kind: Kptfile
 metadata:
   name: mysql
   labels:
-    tier: mysql
     app: wordpress
+    env: demo
+    tier: mysql
 info:
   emails:
     - kpt-team@google.com

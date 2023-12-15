@@ -4,6 +4,7 @@ metadata:
   name: wordpress
   labels:
     app: wordpress
+    env: demo
 upstream:
   type: git
   git:
