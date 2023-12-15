@@ -18,10 +18,12 @@ metadata:
   labels:
     app: wordpress
     tier: mysql
+    env: dev
 spec:
   selector:
     app: wordpress
     tier: mysql
+    env: dev
   ports:
     - protocol: TCP
       port: 3306
@@ -34,6 +36,7 @@ metadata:
   labels:
     app: wordpress
     tier: mysql
+    env: dev
 spec:
   resources:
     requests:
@@ -48,16 +51,19 @@ metadata:
   labels:
     app: wordpress
     tier: mysql
+    env: dev
 spec:
   selector:
     matchLabels:
       app: wordpress
       tier: mysql
+      env: dev
   template:
     metadata:
       labels:
         app: wordpress
         tier: mysql
+        env: dev
     spec:
       containers:
         - name: mysql

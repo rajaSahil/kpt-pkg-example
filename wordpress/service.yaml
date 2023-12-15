@@ -17,11 +17,13 @@ metadata:
   name: wordpress
   labels:
     app: wordpress
+    env: dev
 spec:
   type: LoadBalancer
   selector:
     app: wordpress
     tier: frontend
+    env: dev
   ports:
     - protocol: TCP
       port: 80

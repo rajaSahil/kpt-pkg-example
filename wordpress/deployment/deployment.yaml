@@ -17,16 +17,19 @@ metadata:
   name: wordpress
   labels:
     app: wordpress
+    env: dev
 spec:
   selector:
     matchLabels:
       app: wordpress
       tier: frontend
+      env: dev
   template:
     metadata:
       labels:
         app: wordpress
         tier: frontend
+        env: dev
     spec:
       containers:
         - name: wordpress

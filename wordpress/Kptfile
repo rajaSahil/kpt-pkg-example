@@ -4,6 +4,7 @@ metadata:
   name: wordpress
   labels:
     app: wordpress
+    env: dev
 info:
   description: This is an example wordpress package with mysql subpackage.
 pipeline:

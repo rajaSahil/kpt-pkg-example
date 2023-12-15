@@ -17,6 +17,7 @@ metadata:
   name: wp-pv-claim
   labels:
     app: wordpress
+    env: dev
 spec:
   resources:
     requests:

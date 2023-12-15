@@ -5,6 +5,7 @@ metadata:
   labels:
     tier: mysql
     app: wordpress
+    env: dev
 info:
   emails:
     - kpt-team@google.com
