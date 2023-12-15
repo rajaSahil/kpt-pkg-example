@@ -4,13 +4,13 @@ metadata:
   name: wordpress
   labels:
     app: wordpress
-    env: demo
+    env: prod
 upstream:
   type: git
   git:
     repo: https://github.com/rajasahil/kpt-pkg-example
     directory: /wordpress
-    ref: main
+    ref: v0.1
   updateStrategy: resource-merge
 upstreamLock:
   type: git

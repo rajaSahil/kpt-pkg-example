@@ -17,7 +17,7 @@ metadata: # kpt-merge: /wp-pv-claim
   name: wp-pv-claim
   labels:
     app: wordpress
-    env: demo
+    env: prod
   annotations:
     internal.kpt.dev/upstream-identifier: '|PersistentVolumeClaim|default|wp-pv-claim'
 spec:
