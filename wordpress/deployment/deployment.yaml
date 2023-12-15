@@ -13,23 +13,22 @@
 # limitations under the License.
 apiVersion: apps/v1
 kind: Deployment
-metadata:
+metadata: # kpt-merge: /wordpress
   name: wordpress
   labels:
     app: wordpress
-    env: dev
+  annotations:
+    internal.kpt.dev/upstream-identifier: 'apps|Deployment|default|wordpress'
 spec:
   selector:
     matchLabels:
       app: wordpress
       tier: frontend
-      env: dev
   template:
     metadata:
       labels:
         app: wordpress
         tier: frontend
-        env: dev
     spec:
       containers:
         - name: wordpress

@@ -4,7 +4,20 @@ metadata:
   name: wordpress
   labels:
     app: wordpress
-    env: dev
+upstream:
+  type: git
+  git:
+    repo: https://github.com/rajasahil/kpt-pkg-example
+    directory: /wordpress
+    ref: main
+  updateStrategy: resource-merge
+upstreamLock:
+  type: git
+  git:
+    repo: https://github.com/rajasahil/kpt-pkg-example
+    directory: /wordpress
+    ref: main
+    commit: ed9dcb8ba197712d404ee1355de303b255e9814e
 info:
   description: This is an example wordpress package with mysql subpackage.
 pipeline:
